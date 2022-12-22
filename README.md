@@ -48,11 +48,13 @@ The application has Users add magic items to their "cart", which should in turn 
 
 ![Cart](https://cdn.discordapp.com/attachments/874654004213317705/1055318923949650010/03582C1C-861D-4DFC-83D1-238C7255D94F.jpeg)
 
+### Trello
+
+[My trello board](https://trello.com/invite/b/ypU0wojw/ATTI862db7ea9d18d9353e32bb7f5458517b214A2074/ga-capstone)
+
 ## Socials
 
-- Github
-    - https://github.com/agentlawler
+[Github](https://github.com/agentlawler)
 
-- Linkedin
-    - https://www.linkedin.com/in/lindsey-lawler/
+[Linkedin](https://www.linkedin.com/in/lindsey-lawler/)
 
