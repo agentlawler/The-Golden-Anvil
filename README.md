@@ -2,7 +2,7 @@
 
 ![logo](https://cdn.discordapp.com/attachments/786001839178383411/1055207449419862086/54CBD71B-FBE1-42DA-B01B-49819B72599D_4_5005_c.jpeg)
 
-This App is an online "marketplace" for items in the popular TTRPG "Dungeons and Dragons". It is designed with to streamline the process of buying items while playing the game, a common roadblock within the hobby. 
+This App is an online "marketplace" for items in the popular TTRPG "Dungeons and Dragons". It is designed to streamline the process of buying items while playing the game, a common roadblock within the hobby. 
 
 ## Functionality
 
