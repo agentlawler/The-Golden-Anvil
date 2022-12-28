@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tunr',
-    'res_framework'
+    'ganvil',
+    'rest_framework'
+    
 ]
 
 MIDDLEWARE = [
@@ -52,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tunr_django.urls'
+ROOT_URLCONF = 'ganvil_django.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tunr_django.wsgi.application'
+WSGI_APPLICATION = 'ganvil_django.wsgi.application'
 
 
 # Database

@@ -21,6 +21,7 @@ The application has Users add magic items to their "cart", which should in turn 
         - pscyopg2-binary
         - djangorestframework
         - django-cors-headers 
+        - Pillow
 
 - React
     - react-router-dom
