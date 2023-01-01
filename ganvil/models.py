@@ -13,6 +13,12 @@ RARITY_CHOICES = (
     ("vary", "Varies")
 )
 
+TYPE_CHOICES = (
+    ("weapon", "Weapon"),
+    ("armor", "Armor"),
+    ("wondrous", "Woundrous Item")
+)
+
 
 # Create your models here.
 
@@ -30,6 +36,8 @@ class User(models.Model):
 class Item(models.Model):
     name = models.CharField(max_length=100, null=False, blank = False)
     rarity = models.CharField(max_length=50, choices=RARITY_CHOICES, default="common")
+    type = models.CharField(max_length=50, choices=TYPE_CHOICES, default="weapon")
+    description = models.CharField(max_length=500, null=False, blank = False)
     price = models.DecimalField(max_digits=12, decimal_places=2)
     attunement = models.BooleanField()
     image = models.ImageField(upload_to='uploads/images/', null=True, blank=True)

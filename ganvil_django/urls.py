@@ -17,12 +17,15 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
+from ganvil.views import UserView, ItemView, CartView
 
 route = routers.DefaultRouter()
-
+route.register('items', ItemView, basename='itemview')
+route.register('user', UserView, basename='userview')
+route.register('cart', CartView, basename='cartview')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ganvil/', include(route.urls)),
+    path('', include('route.urls')),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework'))
 ]
