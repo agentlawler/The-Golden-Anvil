@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tq3z!2!&^^zlrq_rh06a*$@deqbao_^vp29_u81k6(!$sn_&3m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -39,13 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ganvil',
     'rest_framework',
+    'corsheaders'
     
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -138,8 +139,16 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "https://sub.example.com",
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
+
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000'
+)
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000"
 ]
