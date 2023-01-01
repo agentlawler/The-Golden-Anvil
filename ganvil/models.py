@@ -26,7 +26,7 @@ class User(models.Model):
     image = models.ImageField(upload_to='uploads/images/', null=True, blank=True)
     username = models.CharField(max_length=50, null=False, blank = False)
     password = models.CharField(max_length=50, null=False, blank = False)
-    name = models.TextField(max_length=50, null=False, blank = False)
+    name = models.CharField(max_length=50, null=False, blank = False)
     email = models.EmailField(max_length=75, null=False, blank = False)
 
     def __str__(self):
@@ -37,7 +37,7 @@ class Item(models.Model):
     name = models.CharField(max_length=100, null=False, blank = False)
     rarity = models.CharField(max_length=50, choices=RARITY_CHOICES, default="common")
     type = models.CharField(max_length=50, choices=TYPE_CHOICES, default="weapon")
-    description = models.CharField(max_length=500, null=False, blank = False)
+    description = models.TextField(max_length=1000, null=False, blank = False)
     price = models.DecimalField(max_digits=12, decimal_places=2)
     attunement = models.BooleanField()
     image = models.ImageField(upload_to='uploads/images/', null=True, blank=True)
