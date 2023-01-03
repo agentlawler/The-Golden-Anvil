@@ -22,6 +22,7 @@ The application has Users add magic items to their "cart", which should in turn 
         - djangorestframework
         - django-cors-headers 
         - Pillow
+        - simplejwt
 
 - React
     - react-router-dom

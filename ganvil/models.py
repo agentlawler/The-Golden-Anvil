@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # specifying choices
 
@@ -22,13 +23,10 @@ TYPE_CHOICES = (
 
 # Create your models here.
 
-class User(models.Model):
-    image = models.ImageField(upload_to='uploads/images/', null=True, blank=True)
-    username = models.CharField(max_length=50, null=False, blank = False)
-    password = models.CharField(max_length=50, null=False, blank = False)
-    name = models.CharField(max_length=50, null=False, blank = False)
-    email = models.EmailField(max_length=75, null=False, blank = False)
+class User(AbstractUser):
 
+    image = models.ImageField(upload_to='uploads/images/', null=True, blank=True)
+    
     def __str__(self):
         return self.username
 

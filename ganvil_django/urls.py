@@ -15,17 +15,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include
-from ganvil.views import UserView, ItemView, CartView
-from rest_framework import routers
+from django.urls import path
+from django.conf.urls import include
 
-route = routers.DefaultRouter()
-route.register('items', ItemView, basename='itemview')
-route.register('user', UserView, basename='userview')
-route.register('cart', CartView, basename='cartview')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ganvil/', include(route.urls)),
-    path('api-auth', include('rest_framework.urls', namespace='rest_framework'))
-]
+    path('', include('ganvil.urls')),
+    path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
+  ]
